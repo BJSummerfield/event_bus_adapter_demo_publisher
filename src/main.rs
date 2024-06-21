@@ -99,5 +99,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         "Message published with routing key: {}",
         regular_routing_key
     );
+
+    channel.close(200, "Bye").await?;
+
     Ok(())
 }
