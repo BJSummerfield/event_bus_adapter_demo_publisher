@@ -21,7 +21,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 }
 
 async fn publish_messages(broker: &MessageBroker) -> Result<(), Box<dyn Error>> {
-    for i in 1..=24 {
+    for i in 1..=1000000 {
         let message = format!("Test message {}", i);
 
         match (i % 6) == 0 {
